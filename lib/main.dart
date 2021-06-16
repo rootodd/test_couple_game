@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:test_couple_game/couple_gender.dart';
+import 'package:test_couple_game/model/gender_model.dart';
+
+import 'game_page.dart';
 
 void main() {
   runApp(MyApp());
@@ -179,7 +181,7 @@ class CoupleGameHome extends StatelessWidget{
                         Navigator.push(
                           context,
                           MaterialPageRoute(
-//                        builder: (context) => GamePage(player_1:player_1, player_2:player_2),
+                          builder: (context) => GamePage(player_1:player_1, player_2:player_2),
                           ),
                         );
                       },

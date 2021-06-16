@@ -9,6 +9,14 @@ class CoupleGenModel extends ChangeNotifier{
   String _player_1 = '女性の名前';
   String _player_2 = '男性の名前';
 
+  String getPlayer_1(){
+    return _player_1;
+  }
+
+  String getPlayer_2(){
+    return _player_2;
+  }
+
   // ノーマルに変更
   void changeGenN() {
     _player_1 = '女性の名前';
