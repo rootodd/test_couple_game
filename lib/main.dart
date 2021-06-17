@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:test_couple_game/model/gender_model.dart';
+import 'package:flutter/services.dart';
 
 import 'game_page.dart';
 
@@ -9,8 +10,11 @@ void main() {
 }
 
 class AppPage extends StatelessWidget{
+
   @override
   Widget build(BuildContext context) {
+    // ステータスバーとナビゲーションバーを非表示
+    SystemChrome.setEnabledSystemUIOverlays([]);
     return MaterialApp(
       title: 'Couple Game',
       theme: ThemeData(
