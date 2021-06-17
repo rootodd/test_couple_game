@@ -40,11 +40,6 @@ class CoupleGameHome extends StatelessWidget{
         builder: (context, model, child) => Scaffold(
           // キーボードを表示した時にレイアウトを崩さない
           resizeToAvoidBottomInset:  false,
-
-          appBar: AppBar(
-            title: Text('カップルゲーム'),
-            backgroundColor: Color(0xFFb70086),
-          ),
           body: Container(
             // 背景のグラデーション設定
             // 背景のグラデーションを設定

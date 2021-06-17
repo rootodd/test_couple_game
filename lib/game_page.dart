@@ -19,9 +19,6 @@ class GamePage extends StatelessWidget{
           create: (context) => ActionTextModel(),
           child: Consumer<ActionTextModel>(
             builder: (context, model, child) => Scaffold(
-              appBar: AppBar(
-                title: Text('ゲーム画面'),
-              ),
               body: Container(
                 // 背景のグラデーションを設定
                 decoration: BoxDecoration(
