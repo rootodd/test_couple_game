@@ -181,7 +181,7 @@ class CoupleGameHome extends StatelessWidget{
                         Navigator.push(
                           context,
                           MaterialPageRoute(
-                          builder: (context) => GamePage(player_1:player_1, player_2:player_2),
+                          builder: (context) => GamePage(player_1,player_2),
                           ),
                         );
                       },

@@ -8,15 +8,15 @@ import 'model/action_text_model.dart';
 
 class GamePage extends StatelessWidget{
 
-  final String player_1;
-  final String player_2;
-
-  const GamePage({Key key, this.player_1, this.player_2}) : super(key:key);
+  GamePage(this.player_1,this.player_2);
+  String player_1;
+  String player_2;
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Couple Gmage Page',
+        debugShowCheckedModeBanner: false,
       home: ChangeNotifierProvider<ActionTextModel>(
         create: (context) => ActionTextModel(),
         child: Consumer<ActionTextModel>(
@@ -63,6 +63,19 @@ class GamePage extends StatelessWidget{
                     ElevatedButton(
                         child: Text('次のお題へ'),
                         onPressed: model.changeActionText,
+                    ),
+                    ElevatedButton(
+                        onPressed: (){
+                          Navigator.pop(context);
+                        },
+                        child: Text('ゲームを終了する'),
+                      style: ElevatedButton.styleFrom(
+                        primary: Color(0xFF930020),
+                        onPrimary: Colors.white,
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(10),
+                        ),
+                      ),
                     ),
                   ],
                 ),
