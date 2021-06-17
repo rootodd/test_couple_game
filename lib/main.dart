@@ -5,21 +5,7 @@ import 'package:test_couple_game/model/gender_model.dart';
 import 'game_page.dart';
 
 void main() {
-  runApp(MyApp());
-}
-
-class MyApp extends StatelessWidget {
-  // This widget is the root of your application.
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Flutter Demo',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
-      home: AppPage(),
-    );
-  }
+  runApp(AppPage());
 }
 
 class AppPage extends StatelessWidget{
@@ -36,12 +22,11 @@ class AppPage extends StatelessWidget{
   }
 }
 
-
-
 class CoupleGameHome extends StatelessWidget{
 
   String player_1 = '';
   String player_2 = '';
+  int game_mode = 0;
 
   @override
   Widget build(BuildContext context) {
@@ -56,7 +41,6 @@ class CoupleGameHome extends StatelessWidget{
             title: Text('カップルゲーム'),
             backgroundColor: Color(0xFFb70086),
           ),
-
           body: Container(
             // 背景のグラデーション設定
             // 背景のグラデーションを設定
@@ -109,7 +93,7 @@ class CoupleGameHome extends StatelessWidget{
                       },
                       style: TextStyle(
                         color: Colors.white,
-                        fontSize: 10.0,
+                        fontSize: 20.0,
                       ),
                       decoration: const InputDecoration(
                         prefixIcon: Icon(
@@ -149,7 +133,7 @@ class CoupleGameHome extends StatelessWidget{
                       },
                       style: TextStyle(
                         color: Colors.white,
-                        fontSize: 10.0,
+                        fontSize: 20.0,
                       ),
                       decoration: const InputDecoration(
                         prefixIcon: Icon(
