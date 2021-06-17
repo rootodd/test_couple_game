@@ -172,6 +172,9 @@ class CoupleGameHome extends StatelessWidget{
                           builder: (context) => GamePage(player_1,player_2),
                           ),
                         );
+                        // ゲーム開始時にテキストフィールドのフォーカスをはずす
+                        // キーボードを非表示
+                        FocusScope.of(context).unfocus();
                       },
                       child: Text(
                         'ゲームスタート',
