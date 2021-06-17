@@ -3,6 +3,7 @@ import 'package:provider/provider.dart';
 import 'package:test_couple_game/model/gender_model.dart';
 import 'package:flutter/services.dart';
 
+import 'drawer_page.dart';
 import 'game_page.dart';
 
 void main() {
@@ -40,6 +41,15 @@ class CoupleGameHome extends StatelessWidget{
         builder: (context, model, child) => Scaffold(
           // キーボードを表示した時にレイアウトを崩さない
           resizeToAvoidBottomInset:  false,
+
+          appBar: AppBar(
+            title: Text(''),
+            backgroundColor: Color(0x44000000),
+            elevation: 0.0,
+          ),
+          drawer: Drawer(
+              child: DrawerPage(),
+          ),
           body: Container(
             // 背景のグラデーション設定
             // 背景のグラデーションを設定
